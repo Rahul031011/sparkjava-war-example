@@ -1,0 +1,33 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMvakNDQWVhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJek1EVXhOekV5TlRreU1Wb1hEVE16TURVeE5ERXlOVGt5TVZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTzZYCkYwY0syU1NOMGN5ai8xVlRaQWFMSHJZV0JGbWltQ0FQdWVkeW9heURiMVUxS0VtRkd5M1ZHVHZlc096TlRnNUgKZG4wZkRndGdQRG4wZ25obVlWZCt4M1VoYVZVVVJUeFd2d2hFc0o0Z1N4eThlVCtPWDVTbnI1LzhhdnQyMUw0UQpwKzZSZk54K1VDOUQvWVg1Q3pDekVWY0ZJMk1ibWlmVks3OVVML1E5VFVXcTFPbUQ0a2h5Z1hPRDVzU2NoMWVPCjZBajgrRmNlc2JCN0J5ZlFxcHhNajdlZlZtbitraUlCcGRJMVJMbmwwbGxrUHYweGgwKzNJQ1VjaEJabXc3L0cKVURoNmdxUno4OFcrd2d3YkpWL0RGNXo1RkFVQTBndEI0S3VlQzBteUErbi9xelFldWt2SWJFVVdpSzRHeWJQcwp0cFNaS3dMY0pFVk1kd2JOcm9FQ0F3RUFBYU5aTUZjd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZLRnp4aEp1V2F0YS9GaHBEWmdwelhSL2N6aytNQlVHQTFVZEVRUU8KTUF5Q0NtdDFZbVZ5Ym1WMFpYTXdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBT0FoWXRGbm1Yc0o3YWJvQTVyTQpvK3ErU0RXb1h6a1dKcVZuV3l4bmxXWU5nRlhFN25pTW9Qd0FKa3lyUnpxQ2NFWHFGbTFzLy9PVldwUEN4eURoCk1rdmpSTUhXaDhmVWtHbzZTZ1dUaEo4QTNCZVdBL0I5VXNWSzVLSjNBZ0hyVldqcFZQUTd0QS9ZYWc2K09STUgKVUhnTFVpWFdmaTdhT0pxQ0JVQ0J1RWcvK3BObFphYW9CT1RXSWk2bXVzajNWK3BYYVhGUWQzUnZ4bjhZOUZuSQpYSkNXUEZ1U3BxaVFXWU5vV0gvS3JMVHUwVWdqOWdxYUttaDJlWnRyMWNHc2pZdXhGQm1iMkUvWnJBWktSUnhDCjM1TCsrOUFOWkQ5TzlZQmt3TGwwNjNsdUw0VkpRSWJWMEhNV1ZYT2lyQTZVU2twcllUbCtTcWhBTWg0NzB0WjMKcG00PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://09EF4EFDFFB5D414CA4497185891968A.gr7.us-east-2.eks.amazonaws.com
+  name: rahul-cluster.us-east-2.eksctl.io
+contexts:
+- context:
+    cluster: rahul-cluster.us-east-2.eksctl.io
+    user: i-097e0e1e2cad8f313@rahul-cluster.us-east-2.eksctl.io
+  name: i-097e0e1e2cad8f313@rahul-cluster.us-east-2.eksctl.io
+current-context: i-097e0e1e2cad8f313@rahul-cluster.us-east-2.eksctl.io
+kind: Config
+preferences: {}
+users:
+- name: i-097e0e1e2cad8f313@rahul-cluster.us-east-2.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - eks
+      - get-token
+      - --output
+      - json
+      - --cluster-name
+      - rahul-cluster
+      - --region
+      - us-east-2
+      command: aws
+      env:
+      - name: AWS_STS_REGIONAL_ENDPOINTS
+        value: regional
+      provideClusterInfo: false
